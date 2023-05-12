@@ -6,8 +6,11 @@ from pip._internal import commands
 with open("somedata", "rt") as f:
     API_TOKEN = f.read()
 
+PROXY_URL = "http://proxy.server:3128/"
+
+
 reminder_id = None
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=API_TOKEN, proxy=PROXY_URL)
 dp = Dispatcher(bot)
 
 
